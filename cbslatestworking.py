@@ -39,7 +39,7 @@ def findAstar(grid, start, goal):
     open_set = [(0, start)] 
     previous_from = {} 
     current_cost = {start: 0}
-    finalpath = []  # Initialize the final path list here
+    finalpath = []  
 
     while open_set:
         currentcost, currentnode = heapq.heappop(open_set)
