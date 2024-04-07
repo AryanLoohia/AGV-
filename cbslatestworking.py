@@ -70,7 +70,7 @@ def low_level(agents, agentno):
     start, goal = agents[agentno]
     path = findAstar(grid, start, goal)
     return path
-
+new_solution=[]
 def high_level_search(agents):
     open_nodes = [(0, [])]  
     while open_nodes:
@@ -81,7 +81,7 @@ def high_level_search(agents):
             return current_solution
         else:
             for agent_index in range(len(agents)):  
-                new_solution = current_solution.copy()  
+                # new_solution = current_solution.copy()  
                 new_solution.append(low_level(agents, agent_index))  
                 newcost = calculate_cost(new_solution)  
                 open_nodes.append((newcost, new_solution)) 
